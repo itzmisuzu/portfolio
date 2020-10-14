@@ -2,24 +2,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
 
     <script>
-        let miku = document.getElementById("miku");
+        // Wait for the document to load before we can execute any code.
+        document.onload = () => {
+            // Now that the document has loaded - document being HTML code - you can now begin to run JS code that is embedded into this code block.
 
-        miku.addEventListener("onclick", (e) => {
-            alert("Hi, I'm Miku!");
-        });
+            // Miku is a unique identifier. Grab that identifier and register the onclick event to it.
+            let miku = document.getElementById("miku");
+
+            miku.onclick = () => {
+                // Shows you a message box on screen.
+                // Notice for future: alert is not an asynchronous function.
+                alert("Hi, I'm Miku!");
+            };
+        }
     </script>
 </head>
 <body>
-    <h1>Hi, I'm Misuzu.<br/>
+    <h1>
+        Hi, I'm Misuzu.<br/>
         I like pie.<br/>
         But I like Miku.
     </h1>
 
-    <div id="miku">
-        <img src="Capture.PNG" alt="This is Miku" id="miku" />
-    </div>
+    <img src="Capture.PNG" alt="This is Miku" id="miku" />
 </body>
 </html>
