@@ -7,9 +7,9 @@
     <script>
         let miku = document.getElementById("miku");
 
-        miku.onclick = () => {
+        miku.addEventListener("onclick", (e) => {
             alert("Hi, I'm Miku!");
-        };
+        });
     </script>
 </head>
 <body>
@@ -18,6 +18,6 @@
         But I like Miku.
     </h1>
 
-    <img src="Capture.PNG" alt="This is Miku" id="miku">
+    <img src="Capture.PNG" alt="This is Miku" id="miku" />
 </body>
 </html>
